@@ -1,0 +1,47 @@
+doSTARFM_PARAMETER_START
+# the numbers of path and row for Landsat image (PPPRRR)
+  
+PATHROW = 194024
+# the start date for predict reflectance with the format of DOY (YYYYDDD)
+  
+PRED_START_DATE = 2011001
+# the end date for predict reflectance with the format of DOY (YYYYDDD)
+  
+PRED_END_DATE = 2011365
+# 
+the strategy of select pair date, choose one among three methods (ND/MR/DATE)
+# 
+	"ND" denotes the "nearest date"
+# 
+	"MR" denotes the "maximum correlation"
+# 
+	"DATE" is manually input a pair date with the format of DOY (YYYYDDD)
+  
+	PAIR_DATE_STRATEGY = MR
+# 
+Landsat normalization or not (ON/OFF)
+# 
+	"ON" denotes Landsat images should do normalization
+# 
+	"OFF" denotes Landsat images needn't do normalization
+  
+	NORMALIZATION = OFF
+# 
+choose bands to process (NDVI or ALL)
+# 
+	NDVI will process red and nir bands only (use either 250m or 500m MODIS)# 
+	ALL will process all ETM+ band 1-5 and 7 (use 500m MODIS)
+  
+BANDS = NDVI
+# subset of one Landsat scene (ON/OFF)
+# 
+	"ON" denotes the prediction size is a subsest of one Landsat scene with the definition of "SUBSET_PARA_****" in the following.
+# 
+	"OFF" denotes the prediction size is the whole Landsat scene
+  
+	SUBSET = ON
+  SUBSET_ULX = 630000
+  SUBSET_ULY = 5750000 
+  SUBSET_LRX = 705000 
+  SUBSET_LRY = 5690000
+doSTARFM_PARAMETER_END
