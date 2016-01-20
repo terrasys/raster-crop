@@ -1,5 +1,6 @@
 # raster-crop
 R script for subsetting of one-band geographic raster files
+-------------------------------------------------------------------
 
 Raster data are simulated NDVI time series based on STARFM in ENVI formate which have been created by STARFM data fusion.
 
